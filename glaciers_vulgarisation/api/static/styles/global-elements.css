@@ -75,6 +75,10 @@ icon {
       margin: 0.5rem 0.5rem;
 }
 
+.animation {
+      min-width: 25rem;
+}
+
 .focus
 {
       border:#160f29 1px solid;
