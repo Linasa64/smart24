@@ -1,7 +1,7 @@
 
 //-------- Faire afficher le bon graphe selon le scénario choisi ----------
 const temperatureOptions = document.querySelectorAll(".temperature-option input[type='radio']");
-const glaciers = ["mdg", "lasneous", "perito_moreno", "ross", "sturgel"];
+const glaciers = ["mdg", "lasneous", "perito_moreno", "ross"];
 const temperatures = ["1_5", "2", "3", "4"];
 
 
