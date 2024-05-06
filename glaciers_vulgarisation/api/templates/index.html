@@ -336,14 +336,15 @@
       <hr>
       <section id="section_4" class="section-container">
         <h2>Elle fond, la forme</h2>
-        <p>Et demain ? Naviguez !
-          Modifiez les années !
-          Modifiez les écarts de température !
+        <p>Jetons un oeil à la forme des glaciers. Avec ou sans déréglement, leur forme change selon les précipitations
+          de l'hiver et les températures de l'été, ils s'adaptent au terrain et subissent les aléas du temps.
+          De notre côté, nous allons nous intéresser à 4 scénarios possibles. Chacun correspond à une évolution de
+          température d'ici 2100, modifiez ces écarts de température, parcourez les années et découvrez l'avenir reservé
+          à ces géants de glace !
         </p>
-        <p>
-          Regardez les glaciers reculer...
+        <legend>
           Plus la couleur tend vers le bleu, plus l'épaisseur de glace est fine.
-        <p>
+        </legend>
         <div class="tab">
           <a class="tablinks" onclick="openGlacier(event, 'glacier1')">Mer de Glace</a>
           <a class="tablinks" onclick="openGlacier(event, 'glacier2')">Las Neous</a>
@@ -448,6 +449,7 @@
             </div>
           </div>
         </div>
+        <p>Les dés semblent déjà jetés...</p>
       </section>
       <hr>
       <section id="section_5" class="section-container">
@@ -480,11 +482,11 @@
             <td>
               <div class="tab">
                 <a class="tablinks" onclick="openSSP126(event, 'mdg-ssp-126')">Mer de glace</a>
-                <a class="tablinks" onclick="openSSP126(event, 'lasneous-ssp-126')">Las Neous</a><img
-                  src="{{ url_for('static', filename='images/icon_highlight_mouse_cursor.png') }}" width="32px"
-                  alt="Icon d'intéraction avec les animations" />
+                <a class="tablinks" onclick="openSSP126(event, 'lasneous-ssp-126')">Las Neous</a>
                 <a class="tablinks" onclick="openSSP126(event, 'perito-ssp-126')">Perito Moreno</a>
                 <a class="tablinks" onclick="openSSP126(event, 'ross-ssp-126')">Ross</a>
+                <img src="{{ url_for('static', filename='images/icon_highlight_mouse_cursor.png') }}" width="32px"
+                  alt="Icon d'intéraction avec les animations" />
               </div>
               <div id="mdg-ssp-126" class="tabcontent-ssp-126">
                 <div id="volume_container_1" class="anim-container">
@@ -532,11 +534,11 @@
             <td>
               <div class="tab">
                 <a class="tablinks" onclick="openSSP370(event, 'mdg-ssp-370')">Mer de Glace</a>
-                <a class="tablinks" onclick="openSSP370(event, 'lasneous-ssp-370')">Las Neous</a><img
-                  src="{{ url_for('static', filename='images/icon_highlight_mouse_cursor.png') }}" width="32px"
-                  alt="Icon d'intéraction avec les animations" />
+                <a class="tablinks" onclick="openSSP370(event, 'lasneous-ssp-370')">Las Neous</a>
                 <a class="tablinks" onclick="openSSP370(event, 'perito-ssp-370')">Perito Moreno</a>
                 <a class="tablinks" onclick="openSSP370(event, 'ross-ssp-370')">Ross</a>
+                <img src="{{ url_for('static', filename='images/icon_highlight_mouse_cursor.png') }}" width="32px"
+                  alt="Icon d'intéraction avec les animations" />
               </div>
               <div id="mdg-ssp-370" class="tabcontent-ssp-370">
                 <div id="volume_container_1" class="anim-container">
@@ -604,11 +606,11 @@
             <td>
               <div class="tab">
                 <a class="tablinks" onclick="openSSP585(event, 'mdg-ssp-585')">Mer de Glace</a>
-                <a class="tablinks" onclick="openSSP585(event, 'lasneous-ssp-585')">Las Neous</a><img
-                  src="{{ url_for('static', filename='images/icon_highlight_mouse_cursor.png') }}" width="32px"
-                  alt="Icon d'intéraction avec les animations" />
+                <a class="tablinks" onclick="openSSP585(event, 'lasneous-ssp-585')">Las Neous</a>
                 <a class="tablinks" onclick="openSSP585(event, 'perito-ssp-585')">Perito Moreno</a>
                 <a class="tablinks" onclick="openSSP585(event, 'ross-ssp-585')">Ross</a>
+                <img src="{{ url_for('static', filename='images/icon_highlight_mouse_cursor.png') }}" width="32px"
+                  alt="Icon d'intéraction avec les animations" />
               </div>
               <div id="mdg-ssp-585" class="tabcontent-ssp-585">
                 <div id="volume_container_1" class="anim-container">
