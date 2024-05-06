@@ -4,10 +4,6 @@ nav ul {
       padding: 0;
 }
 
-nav ul li {
-      padding: 0 0.5rem;
-}
-
 /* Only stick if you can fit */
 @media (min-height: 300px) {
       nav ul {
@@ -36,6 +32,7 @@ nav ul label {
 
 .options {
       flex-direction: column;
+      margin-left: 16%;
 }
 
 .options label {
@@ -51,12 +48,14 @@ nav ul label {
       width: 20px;
       height: 20px;
       border-radius: 50%;
-      margin: 0 8% 0 16%; 
       border: 1px solid #7b7770;
+      display: inline-block;
 }
 
 .temperature-option h4 {
       margin: 8% 0%; 
+      width: 50px;
+      color: white
 }
 
 .green {
@@ -74,6 +73,7 @@ nav ul label {
 
 .options input[type="radio"]:checked + .circle {
       border: 2px solid #160f29;
+      width: 20px;
 }
 
 #evolution_container_mdg_1_5 {

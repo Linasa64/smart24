@@ -1,19 +1,25 @@
 /* Style des onglets */
 .tab {
-    overflow: hidden;
     border: 1px solid #f7f7f2;
     background-color: #52708d;
-    margin:12px;
+    margin: 12px;
+    display: inline-flex;
+    position: relative;
+    flex-wrap: wrap;
   }
   
   .tab a {
     background-color: inherit;
-    float: left;
+    overflow: hidden;
     border: none;
-    outline: none;
     cursor: pointer;
     padding: 14px 16px;
     transition: 0.3s;
+    position: relative;
+    text-align: center;
+    text-transform: uppercase;
+    flex-grow: 1;
+    max-width: 100%; 
   }
   
   .tab a:hover {
