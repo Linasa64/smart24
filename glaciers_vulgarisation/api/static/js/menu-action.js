@@ -43,7 +43,7 @@ window.addEventListener("scroll", event => {
 
     if (
       section.offsetTop <= fromTop &&
-      section.offsetTop + section.offsetHeight > fromTop
+      section.offsetTop + section.offsetHeight >= fromTop
     ) {
       link.classList.add("current");
     } else {

@@ -33,11 +33,12 @@
   <nav>
     <ul>
       <li><a href="#section_1">Introduction</a></li>
-      <li><a href="#section_2">Prologue</a></li>
-      <li><a href="#section_3">Partie I</a></li>
-      <li><a href="#section_4">Partie II</a></li>
-      <li><a href="#section_5">Partie III</a></li>
-      <li><a href="#section_6">Partie IV</a></li>
+      <li><a href="#section_2">Etat des lieux</a></li>
+      <li><a href="#section_3">La rupture de l'équilibre</a></li>
+      <li><a href="#section_4">Elle fond, la forme</a></li>
+      <li><a href="#section_5">Comme un trou dans une baignoire</a></li>
+      <li><a href="#section_6">Un drame en deux actes</a></li>
+      <li><a href="#section_7">Que retenir ?</a></li>
     </ul>
   </nav>
 
@@ -131,7 +132,7 @@
       </section>
       <hr>
       <section id="section_2" class="section-container">
-        <h2>Prologue</h2>
+        <h2>Etat des lieux</h2>
         <div class="two-columns">
           <div class="left-part">
             <p>
@@ -239,6 +240,10 @@
           </table>
           <p>Mais avant d’aller plus loin, pourquoi ne pas profiter de jouer un peu à découvrir les différents glaciers
             du monde ?</p>
+
+          <legend> <img src="{{ url_for('static', filename='images/icon_highlight_mouse_cursor.png') }}" width="32px"
+              alt="Icon d'intéraction avec les animations" />
+            Ce symbole indique qu'il est possible d'intéragir avec l'animation. </legend>
           <iframe src="/dash" width="100%" height="600"></iframe>
       </section>
       <hr>
@@ -290,6 +295,9 @@
           <a class="tablinks" onclick="openTabELA(event, 'glacier-ela3')">Perito Moreno</a>
           <a class="tablinks" onclick="openTabELA(event, 'glacier-ela4')">Ross</a>
           <a class="tablinks" onclick="openTabELA(event, 'glacier-ela5')">Sturgel</a>
+          <img src="{{ url_for('static', filename='images/icon_highlight_mouse_cursor.png') }}" width="32px"
+            alt="Icon d'intéraction avec les animations" />
+          <p id="post-ela">
         </div>
         <div id="glacier-ela1" class="tabcontent-ela">
           <div class="illustration-container">
@@ -316,9 +324,8 @@
             <img src="{{ url_for('static', filename='images/ela/ela_sturgel.png') }}" alt="Illustration">
           </div>
         </div>
-        <p id="post-ela">
-          Sur les cinq glaciers que nous avons choisis, la tendance est la même, la ligne d’équilibre
-          remonte, ce qui signifie une seule chose : ces glaciers reculent.
+        Sur les cinq glaciers que nous avons choisis, la tendance est la même, la ligne d’équilibre
+        remonte, ce qui signifie une seule chose : ces glaciers reculent.
         </p>
         <blockquote>Si tu ne sais pas où tu vas, regarde d'où tu viens</blockquote>
 
@@ -340,6 +347,8 @@
           <a class="tablinks" onclick="openGlacier(event, 'glacier3')">Perito Moreno</a>
           <a class="tablinks" onclick="openGlacier(event, 'glacier5')">Sturgel</a>
           <a class="tablinks" onclick="openGlacier(event, 'glacier4')">Ross</a>
+          <img src="{{ url_for('static', filename='images/icon_highlight_mouse_cursor.png') }}" width="32px"
+            alt="Icon d'intéraction avec les animations" />
         </div>
         <div class="evolution">
           <div class="options">
@@ -487,7 +496,9 @@
             <td>
               <div class="tab">
                 <a class="tablinks" onclick="openSSP126(event, 'mdg-ssp-126')">Mer de glace</a>
-                <a class="tablinks" onclick="openSSP126(event, 'lasneous-ssp-126')">Las Neous</a>
+                <a class="tablinks" onclick="openSSP126(event, 'lasneous-ssp-126')">Las Neous</a><img
+                  src="{{ url_for('static', filename='images/icon_highlight_mouse_cursor.png') }}" width="32px"
+                  alt="Icon d'intéraction avec les animations" />
                 <a class="tablinks" onclick="openSSP126(event, 'perito-ssp-126')">Perito Moreno</a>
                 <a class="tablinks" onclick="openSSP126(event, 'sturgel-ssp-126')">Sturgel</a>
                 <a class="tablinks" onclick="openSSP126(event, 'ross-ssp-126')">Ross</a>
@@ -548,7 +559,9 @@
             <td>
               <div class="tab">
                 <a class="tablinks" onclick="openSSP370(event, 'mdg-ssp-370')">Mer de Glace</a>
-                <a class="tablinks" onclick="openSSP370(event, 'lasneous-ssp-370')">Las Neous</a>
+                <a class="tablinks" onclick="openSSP370(event, 'lasneous-ssp-370')">Las Neous</a><img
+                  src="{{ url_for('static', filename='images/icon_highlight_mouse_cursor.png') }}" width="32px"
+                  alt="Icon d'intéraction avec les animations" />
                 <a class="tablinks" onclick="openSSP370(event, 'perito-ssp-370')">Perito Moreno</a>
                 <a class="tablinks" onclick="openSSP370(event, 'sturgel-ssp-370')">Sturgel</a>
                 <a class="tablinks" onclick="openSSP370(event, 'ross-ssp-370')">Ross</a>
@@ -629,7 +642,9 @@
             <td>
               <div class="tab">
                 <a class="tablinks" onclick="openSSP585(event, 'mdg-ssp-585')">Mer de Glace</a>
-                <a class="tablinks" onclick="openSSP585(event, 'lasneous-ssp-585')">Las Neous</a>
+                <a class="tablinks" onclick="openSSP585(event, 'lasneous-ssp-585')">Las Neous</a><img
+                  src="{{ url_for('static', filename='images/icon_highlight_mouse_cursor.png') }}" width="32px"
+                  alt="Icon d'intéraction avec les animations" />
                 <a class="tablinks" onclick="openSSP585(event, 'perito-ssp-585')">Perito Moreno</a>
                 <a class="tablinks" onclick="openSSP585(event, 'sturgel-ssp-585')">Sturgel</a>
                 <a class="tablinks" onclick="openSSP585(event, 'ross-ssp-585')">Ross</a>
@@ -775,7 +790,9 @@
         <p>
           Voilà une carte de l’Europe qui vous présente les zones qui seraient impactées.
         <div id="niveau_mer_ssp126" class="anim-container">
-          {% include 'niveau_mer_ssp126.html' %}
+          {% include 'niveau_mer_ssp126.html' %}<img
+            src="{{ url_for('static', filename='images/icon_highlight_mouse_cursor.png') }}" width="32px"
+            alt="Icon d'intéraction avec les animations" />
           <legend>Evolution du niveau de la Mer en Europe - SSP126</legend>
         </div>
         </p>
