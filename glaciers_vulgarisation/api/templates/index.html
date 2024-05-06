@@ -244,9 +244,13 @@
           <p>Avant d’aller plus loin, la carte du monde ci-dessous permet de découvrir les différents glaciers du monde,
             baladez-vous autour du globe, explorez par pays ou par nom du glacier ! </p>
 
-          <legend> <img src="{{ url_for('static', filename='images/icon_highlight_mouse_cursor.png') }}" width="32px"
-              alt="Icon d'intéraction avec les animations" />
-            Ce symbole indique qu'il est possible d'intéragir avec l'animation. </legend>
+          <legend>
+            Ce symbole indique qu'il est possible d'intéragir avec l'animation.
+          </legend>
+          <icon>
+            <img src="{{ url_for('static', filename='images/icon_highlight_mouse_cursor.png') }}" width="32px"
+              margin="0 0.5rem" alt="Icon d'intéraction avec les animations" />
+          </icon>
           <iframe src="/dash" width="100%" height="600"></iframe>
       </section>
       <hr>
@@ -303,8 +307,10 @@
           <a class="tablinks" onclick="openTabELA(event, 'glacier-ela2')">Las Neous</a>
           <a class="tablinks" onclick="openTabELA(event, 'glacier-ela3')">Perito Moreno</a>
           <a class="tablinks" onclick="openTabELA(event, 'glacier-ela4')">Ross</a>
-          <img src="{{ url_for('static', filename='images/icon_highlight_mouse_cursor.png') }}" width="32px"
-            alt="Icon d'intéraction avec les animations" />
+          <icon>
+            <img src="{{ url_for('static', filename='images/icon_highlight_mouse_cursor.png') }}" width="32px"
+              margin="0 0.5rem" alt="Icon d'intéraction avec les animations" />
+          </icon>
           <p id="post-ela">
         </div>
         <div id="glacier-ela1" class="tabcontent-ela">
@@ -350,8 +356,10 @@
           <a class="tablinks" onclick="openGlacier(event, 'glacier2')">Las Neous</a>
           <a class="tablinks" onclick="openGlacier(event, 'glacier3')">Perito Moreno</a>
           <a class="tablinks" onclick="openGlacier(event, 'glacier4')">Ross</a>
-          <img src="{{ url_for('static', filename='images/icon_highlight_mouse_cursor.png') }}" width="32px"
-            alt="Icon d'intéraction avec les animations" />
+          <icon>
+            <img src="{{ url_for('static', filename='images/icon_highlight_mouse_cursor.png') }}" width="32px"
+              margin="0 0.5rem" alt="Icon d'intéraction avec les animations" />
+          </icon>
         </div>
         <div class="evolution">
           <div class="options">
@@ -490,8 +498,10 @@
                 <a class="tablinks" onclick="openSSP126(event, 'lasneous-ssp-126')">Las Neous</a>
                 <a class="tablinks" onclick="openSSP126(event, 'perito-ssp-126')">Perito Moreno</a>
                 <a class="tablinks" onclick="openSSP126(event, 'ross-ssp-126')">Ross</a>
-                <img src="{{ url_for('static', filename='images/icon_highlight_mouse_cursor.png') }}" width="32px"
-                  alt="Icon d'intéraction avec les animations" />
+                <icon>
+                  <img src="{{ url_for('static', filename='images/icon_highlight_mouse_cursor.png') }}" width="32px"
+                    margin="0 0.5rem" alt="Icon d'intéraction avec les animations" />
+                </icon>
               </div>
               <div id="mdg-ssp-126" class="tabcontent-ssp-126">
                 <div id="volume_container_1" class="anim-container">
@@ -542,8 +552,10 @@
                 <a class="tablinks" onclick="openSSP370(event, 'lasneous-ssp-370')">Las Neous</a>
                 <a class="tablinks" onclick="openSSP370(event, 'perito-ssp-370')">Perito Moreno</a>
                 <a class="tablinks" onclick="openSSP370(event, 'ross-ssp-370')">Ross</a>
-                <img src="{{ url_for('static', filename='images/icon_highlight_mouse_cursor.png') }}" width="32px"
-                  alt="Icon d'intéraction avec les animations" />
+                <icon>
+                  <img src="{{ url_for('static', filename='images/icon_highlight_mouse_cursor.png') }}" width="32px"
+                    margin="0 0.5rem" alt="Icon d'intéraction avec les animations" />
+                </icon>
               </div>
               <div id="mdg-ssp-370" class="tabcontent-ssp-370">
                 <div id="volume_container_1" class="anim-container">
@@ -620,8 +632,10 @@
                 <a class="tablinks" onclick="openSSP585(event, 'lasneous-ssp-585')">Las Neous</a>
                 <a class="tablinks" onclick="openSSP585(event, 'perito-ssp-585')">Perito Moreno</a>
                 <a class="tablinks" onclick="openSSP585(event, 'ross-ssp-585')">Ross</a>
-                <img src="{{ url_for('static', filename='images/icon_highlight_mouse_cursor.png') }}" width="32px"
-                  alt="Icon d'intéraction avec les animations" />
+                <icon>
+                  <img src="{{ url_for('static', filename='images/icon_highlight_mouse_cursor.png') }}" width="32px"
+                    alt="Icon d'intéraction avec les animations" />
+                </icon>
               </div>
               <div id="mdg-ssp-585" class="tabcontent-ssp-585">
                 <div id="volume_container_1" class="anim-container">
@@ -731,7 +745,7 @@
         <div id="albedo" class="focus">
           <h4>L'effet albédo</h4>
           <div class="illustration-container">
-            <img src="{{ url_for('static', filename='images/albedo.jpg') }}" alt="Illustration">
+            <img src="{{ url_for('static', filename='images/albedo.jpg') }}" alt="Illustration" width="80%">
             <legend>Les principes de l'Effet Albédo ©Surfrider Foundation Europe</legend>
           </div>
         </div>
@@ -754,9 +768,9 @@
         <p>
           Voilà une carte de l’Europe qui vous présente les zones qui seraient impactées.
         <div id="niveau_mer_ssp126" class="anim-container">
-          {% include 'niveau_mer_ssp126.html' %}<img
-            src="{{ url_for('static', filename='images/icon_highlight_mouse_cursor.png') }}" width="32px"
-            alt="Icon d'intéraction avec les animations" />
+          {% include 'niveau_mer_ssp126.html' %}
+          <icon><img src="{{ url_for('static', filename='images/icon_highlight_mouse_cursor.png') }}" width="32px"
+              margin="0 0.5rem" alt="Icon d'intéraction avec les animations" /></icon>
           <legend>Evolution du niveau de la Mer en Europe - SSP126</legend>
         </div>
         </p>
