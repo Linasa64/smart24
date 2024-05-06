@@ -53,6 +53,33 @@ def create_dash_app(server: Flask):
         title='Surface des glaciers dans le monde'
     )
 
+    fig.update_layout(coloraxis_colorbar=dict(title='SURFACE', 
+                                          tickvals=[-8, 8], 
+                                          ticktext=['Surface -', 'Surface +'], 
+                                          tickmode='array', 
+                                          tick0=0, 
+                                          dtick=1,
+                                          tickfont=dict(size=14, family='Arial', color='black')))
+
+    fig.update_geos(showcountries=True, 
+                    countrycolor="Gray",
+                    showland=True, 
+                    landcolor="darkolivegreen",
+                    showocean=True, 
+                    oceancolor="lightsteelblue",
+                    showlakes=True, 
+                    lakecolor="LightBlue",
+                    showrivers=True, 
+                    rivercolor="LightBlue")
+
+    fig.update_layout(title=dict(text='Carte du monde des glaciers', 
+                                x=0.5,  # Centrer le titre
+                                font=dict(family='Impact', size=24, color='midnightblue')))
+
+    fig.update_layout(margin=dict(l=50, r=50, t=100, b=100), 
+                    coloraxis_colorbar_len=1, 
+                    coloraxis_colorbar_x=1) 
+
     # Liste des pays uniques dans votre dataframe
     liste_pays = merged_df['COUNTRY'].unique()
 
