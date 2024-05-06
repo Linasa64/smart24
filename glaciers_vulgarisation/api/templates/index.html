@@ -199,13 +199,12 @@
           </div>
           <p>
             Ensemble, nous allons voir quels impacts auraient les différents scénarios sur les glaciers du monde.
-            Nous avons choisi de mettre à votre disposition un ensemble d’animations sur 5 glaciers afin
+            Nous avons choisi de mettre à votre disposition un ensemble d’animations sur 4 glaciers afin
             de mieux comprendre leur comportement et leur évolution. <br />
             1. Le Perito Moreno est un glacier situé en Patagonie. <br />
             2. Las Neous est situé dans les Pyrénées à la frontière franco-espagnole. <br />
             3. La Mer de glace se trouve aux abords du Mont-Blanc. <br />
             4. Le Ross Ice Shelf est une plateforme de glace en Antarctique de la taille de la France. <br />
-            5. Enfin le Sturgel.
           </p>
           <table>
             <tr>
@@ -304,7 +303,6 @@
           <a class="tablinks" onclick="openTabELA(event, 'glacier-ela2')">Las Neous</a>
           <a class="tablinks" onclick="openTabELA(event, 'glacier-ela3')">Perito Moreno</a>
           <a class="tablinks" onclick="openTabELA(event, 'glacier-ela4')">Ross</a>
-          <a class="tablinks" onclick="openTabELA(event, 'glacier-ela5')">Sturgel</a>
           <img src="{{ url_for('static', filename='images/icon_highlight_mouse_cursor.png') }}" width="32px"
             alt="Icon d'intéraction avec les animations" />
           <p id="post-ela">
@@ -329,11 +327,6 @@
             <img src="{{ url_for('static', filename='images/ela/ela_ross.png') }}" alt="Illustration">
           </div>
         </div>
-        <div id="glacier-ela5" class="tabcontent-ela">
-          <div class="illustration-container">
-            <img src="{{ url_for('static', filename='images/ela/ela_sturgel.png') }}" alt="Illustration">
-          </div>
-        </div>
         Sur les cinq glaciers que nous avons choisis, la tendance est la même, la ligne d’équilibre
         remonte, ce qui signifie une seule chose : ces glaciers reculent. Si la ligne se trouve au-dessus de l'altitude
         du glacier, alors le glacier ne peut plus se former.
@@ -355,7 +348,6 @@
           <a class="tablinks" onclick="openGlacier(event, 'glacier1')">Mer de Glace</a>
           <a class="tablinks" onclick="openGlacier(event, 'glacier2')">Las Neous</a>
           <a class="tablinks" onclick="openGlacier(event, 'glacier3')">Perito Moreno</a>
-          <a class="tablinks" onclick="openGlacier(event, 'glacier5')">Sturgel</a>
           <a class="tablinks" onclick="openGlacier(event, 'glacier4')">Ross</a>
           <img src="{{ url_for('static', filename='images/icon_highlight_mouse_cursor.png') }}" width="32px"
             alt="Icon d'intéraction avec les animations" />
@@ -455,24 +447,6 @@
               <legend>Evolution de Ross de 2010 à 2100 (+4°C)</legend>
             </div>
           </div>
-          <div id="glacier5" class="tabcontent">
-            <div id="evolution_container_sturgel_1_5" class="anim-container">
-              {% include 'sturgel/evolution/evolution_sturgel_1_5.html' %}
-              <legend>Evolution de Sturgel de 2010 à 2100 (+1.5°C)</legend>
-            </div>
-            <div id="evolution_container_sturgel_2" class="anim-container">
-              {% include 'sturgel/evolution/evolution_sturgel_2.html' %}
-              <legend>Evolution de Sturgel de 2010 à 2100 (+2°C)</legend>
-            </div>
-            <div id="evolution_container_sturgel_3" class="anim-container">
-              {% include 'sturgel/evolution/evolution_sturgel_3.html' %}
-              <legend>Evolution de Sturgel de 2010 à 2100 (+3°C)</legend>
-            </div>
-            <div id="evolution_container_sturgel_4" class="anim-container">
-              {% include 'sturgel/evolution/evolution_sturgel_4.html' %}
-              <legend>Evolution de Sturgel de 2010 à 2100 (+4°C)</legend>
-            </div>
-          </div>
         </div>
       </section>
       <hr>
@@ -510,7 +484,6 @@
                   src="{{ url_for('static', filename='images/icon_highlight_mouse_cursor.png') }}" width="32px"
                   alt="Icon d'intéraction avec les animations" />
                 <a class="tablinks" onclick="openSSP126(event, 'perito-ssp-126')">Perito Moreno</a>
-                <a class="tablinks" onclick="openSSP126(event, 'sturgel-ssp-126')">Sturgel</a>
                 <a class="tablinks" onclick="openSSP126(event, 'ross-ssp-126')">Ross</a>
               </div>
               <div id="mdg-ssp-126" class="tabcontent-ssp-126">
@@ -543,16 +516,6 @@
                   </legend>
                 </div>
               </div>
-              <div id="sturgel-ssp-126" class="tabcontent-ssp-126">
-                <div id="volume_container_4" class="anim-container">
-                  {% include 'sturgel/volume/sturgel_volume_scenario_1_ssp126.html' %}
-                  <legend>
-                    Evolution du volume de Sturgel selon SSP126
-                    <br>
-                    1979-2100
-                  </legend>
-                </div>
-              </div>
               <div id="ross-ssp-126" class="tabcontent-ssp-126">
                 <div id="volume_container_11" class="anim-container">
                   {% include 'ross/volume/ross_volume_scenario_1_ssp126.html' %}
@@ -573,7 +536,6 @@
                   src="{{ url_for('static', filename='images/icon_highlight_mouse_cursor.png') }}" width="32px"
                   alt="Icon d'intéraction avec les animations" />
                 <a class="tablinks" onclick="openSSP370(event, 'perito-ssp-370')">Perito Moreno</a>
-                <a class="tablinks" onclick="openSSP370(event, 'sturgel-ssp-370')">Sturgel</a>
                 <a class="tablinks" onclick="openSSP370(event, 'ross-ssp-370')">Ross</a>
               </div>
               <div id="mdg-ssp-370" class="tabcontent-ssp-370">
@@ -601,16 +563,6 @@
                   {% include 'perito_moreno/volume/perito_moreno_volume_scenario_2_ssp370.html' %}
                   <legend>
                     Evolution du volume de Perito Moreno selon SSP370
-                    <br>
-                    1979-2100
-                  </legend>
-                </div>
-              </div>
-              <div id="sturgel-ssp-370" class="tabcontent-ssp-370">
-                <div id="volume_container_4" class="anim-container">
-                  {% include 'sturgel/volume/sturgel_volume_scenario_2_ssp370.html' %}
-                  <legend>
-                    Evolution du volume de Sturgel selon SSP126
                     <br>
                     1979-2100
                   </legend>
@@ -656,7 +608,6 @@
                   src="{{ url_for('static', filename='images/icon_highlight_mouse_cursor.png') }}" width="32px"
                   alt="Icon d'intéraction avec les animations" />
                 <a class="tablinks" onclick="openSSP585(event, 'perito-ssp-585')">Perito Moreno</a>
-                <a class="tablinks" onclick="openSSP585(event, 'sturgel-ssp-585')">Sturgel</a>
                 <a class="tablinks" onclick="openSSP585(event, 'ross-ssp-585')">Ross</a>
               </div>
               <div id="mdg-ssp-585" class="tabcontent-ssp-585">
@@ -684,16 +635,6 @@
                   {% include 'perito_moreno/volume/perito_moreno_volume_scenario_3_ssp585.html' %}
                   <legend>
                     Evolution du volume de Perito Moreno selon SSP585
-                    <br>
-                    1979-2100
-                  </legend>
-                </div>
-              </div>
-              <div id="sturgel-ssp-585" class="tabcontent-ssp-585">
-                <div id="volume_container_4" class="anim-container">
-                  {% include 'sturgel/volume/sturgel_volume_scenario_3_ssp585.html' %}
-                  <legend>
-                    Evolution du volume de Sturgel selon SSP585
                     <br>
                     1979-2100
                   </legend>
