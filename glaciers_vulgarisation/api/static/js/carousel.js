@@ -13,7 +13,3 @@ function showSlides() {
   slides[slideIndex-1].style.opacity = 0.5;
   setTimeout(showSlides, 5000); // Change l'image toutes les 2 secondes (2000ms)
 }
-
-function plusSlides(n) {
-  showSlides(slideIndex += n);
-}
