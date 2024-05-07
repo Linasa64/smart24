@@ -478,7 +478,7 @@
         <table>
           <tr>
             <td>
-              <div id="ssp-126" class="focus">
+              <div id="ssp-126-volume" class="focus">
                 <h3>SSP 1-2.6</h3>
                 <p>
                   Le scénario SSP 126 est basé sur une tendance relativement optimiste avec des investissements dans
@@ -596,7 +596,7 @@
               </div>
             </td>
             <td>
-              <div id="ssp-370" class="focus">
+              <div id="ssp-370-volume" class="focus">
                 <h3>SSP 3-7.0</h3>
                 <p>
                   Le scénario SSP370 est basé sur une tendance de développement plus pessimistes, avec peu
@@ -611,7 +611,7 @@
           </tr>
           <tr>
             <td>
-              <div id="ssp-585" class="focus">
+              <div id="ssp-585-volume" class="focus">
                 <h3>SSP 5-8.5</h3>
                 <p>
                   Le scénario SSP585 est très similaire au scénario SSP1(2.6). Il est basé sur une tendance relativement
@@ -677,6 +677,41 @@
             </td>
           </tr>
         </table>
+
+        <p>Mais où part toute cette eau ? Pour une bonne partie, nous la retrouvons dans les courants d'eau. Après avoir
+          ruisselé dans le glacier, l'eau de font se retrouve dans les ruisseaux, puis les rivières, et enfin les
+          fleuves avant de se jeter dans la mer et dans l'océan.</p>
+
+          <div class="tab">
+            <a class="tablinks" onclick="openTab(event, 'flux-ssp-126','tabcontent-flux')">SSP 1-2.6</a>
+            <a class="tablinks" onclick="openTab(event, 'flux-ssp-370','tabcontent-flux')">SSP 3-7.0</a>
+            <a class="tablinks" onclick="openTab(event, 'flux-ssp-585','tabcontent-flux')">SSP 5-8.5</a>
+            <icon>
+              <img src="{{ url_for('static', filename='images/icon_highlight_mouse_cursor.png') }}" width="32px"
+                margin="0 0.5rem" alt="Icon d'intéraction avec les animations" />
+            </icon>
+          </div>
+          <div id="flux-ssp-126" class="tabcontent-flux">
+            <div class="illustration-container">
+              {% include 'flux/flux_rivieres_ssp126.html' %}
+              <legend>Evolution du lit d'une rivière - SSP1-2.6</legend>
+            </div>
+          </div>
+          <div id="flux-ssp-370" class="tabcontent-flux">
+            <div class="illustration-container">
+              {% include 'flux/flux_rivieres_ssp370.html' %}
+              <legend>Evolution du lit d'une rivière - SSP3-7.0</legend>
+            </div>
+          </div>
+          <div id="flux-ssp-585" class="tabcontent-flux">
+            <div class="illustration-container">
+              {% include 'flux/flux_rivieres_ssp585.html' %}
+              <legend>Evolution du lit d'une rivière - SSP5-8.5</legend>
+            </div>
+
+
+
+
       </section>
       <hr>
       <section id="section_6" class="section-container">
@@ -689,7 +724,8 @@
         <div class="two-columns">
           <div class="left-part">
             <p>
-              Cette citation n'aurait-elle pas été écrite pour ce moment précis ? Sous quelle forme disparaît notre glace ?
+              Cette citation n'aurait-elle pas été écrite pour ce moment précis ? Sous quelle forme disparaît notre
+              glace ?
               Sous les 3. Sous forme liquide par la fonte, solide lors de vêlage, ou gazeuse lorsque cell-ci disparaît.
               Le vêlage est le phénomène qui provoque la création d'iceberg.
             </p>
@@ -727,33 +763,6 @@
             </p>
           </div>
         </div>
-        <div class="tab">
-          <a class="tablinks" onclick="openTab(event, 'flux-ssp-126','tabcontent-flux')">SSP 1-2.6</a>
-          <a class="tablinks" onclick="openTab(event, 'flux-ssp-370','tabcontent-flux')">SSP 3-7.0</a>
-          <a class="tablinks" onclick="openTab(event, 'flux-ssp-585','tabcontent-flux')">SSP 5-8.5</a>
-          <icon>
-            <img src="{{ url_for('static', filename='images/icon_highlight_mouse_cursor.png') }}" width="32px"
-              margin="0 0.5rem" alt="Icon d'intéraction avec les animations" />
-          </icon>
-        </div>
-        <div id="flux-ssp-126" class="tabcontent-flux">
-          <div class="illustration-container">
-            {% include 'flux_rivieres_ssp126.html' %}
-            <legend>Evolution du lit d'une rivière - SSP1-2.6</legend>
-          </div>
-        </div>
-        <div id="flux-ssp-370" class="tabcontent-flux">
-          <div class="illustration-container">
-            {% include 'flux_rivieres_ssp370.html' %}
-            <legend>Evolution du lit d'une rivière - SSP3-7.0</legend>
-          </div>
-        </div>
-        <div id="flux-ssp-585" class="tabcontent-flux">
-          <div class="illustration-container">
-            {% include 'flux_rivieres_ssp585.html' %}
-            <legend>Evolution du lit d'une rivière - SSP5-8.5</legend>
-          </div>
-        </div>
         <p>
           En fondant, la glace diminue
           son effet albédo, l’énergie absorbée est de plus en plus importante, ce qui contribue au réchauffement
@@ -761,10 +770,10 @@
         </p>
         <div id="albedo" class="focus">
           <h3>L'effet albédo</h3>
-            <div class="illustration-container">
-              <img src="{{ url_for('static', filename='images/albedo.jpg') }}" alt="Illustration" width="80%">
-              <legend>Les principes de l'Effet Albédo ©Surfrider Foundation Europe</legend>
-            </div>
+          <div class="illustration-container">
+            <img src="{{ url_for('static', filename='images/albedo.jpg') }}" alt="Illustration" width="80%">
+            <legend>Les principes de l'Effet Albédo ©Surfrider Foundation Europe</legend>
+          </div>
         </div>
 
         <p>
@@ -812,13 +821,14 @@
               <legend>Evolution du niveau de la mer/océan en Europe - SSP5-8.5</legend>
             </div>
         </div>
-        </p>
         <p>
           Mais ce problème n’est pas le seul, des problèmes bien plus insidieux pourrait arriver avec la fonte de
           ceux-ci. L’accélération de l’effet de serre par le rejet de gaz emprisonnés (qui comme l’effet albédo va
-          accélérer de nouveau la fonte). Cetaines espèces perdent leur lieu de vie. La libération d’anciens organismes pouvant se révéler bénéfiques ou
-          terriblement léthaux... 
+          accélérer de nouveau la fonte). Cetaines espèces perdent leur lieu de vie. La libération d’anciens organismes
+          pouvant se révéler bénéfiques ou
+          terriblement léthaux...
         </p>
+
       </section>
       <hr>
       <section id="section_7" class="section-container">
@@ -828,7 +838,7 @@
         </h3>
         <p>
           Nous avons le pouvoir d'agir à petite échelle. Par notre consommation et nos actes.
-          Mais le plus important reste de faire comprendre aux personnes qui nous diroge l'importance du changement climatique.
+          Mais le plus important reste de faire comprendre aux personnes qui nous dirige l'importance du changement climatique.
           Il faut réussir à faire agir les grands acteurs (états, entreprises).
         </p>
         <div id="thanks" class="focus">
