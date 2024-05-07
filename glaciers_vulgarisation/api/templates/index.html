@@ -169,12 +169,12 @@
           <p>
             Le <a href="giec">GIEC</a> a publié le 20 mars 2023 son 6ème rapport d’évaluation concernant l’évolution du
             climat.
-            Fruit d’une collaboration internationale, ce nouveau rapport du GIEC synthétise les connaissances
-            scientifiques acquises entre 2015 et 2021 sur le changement climatique, ses causes, ses impacts et les
-            mesures possibles pour l’atténuer et s’y adapter.
+            <em>Fruit d’une collaboration internationale, ce nouveau rapport du GIEC synthétise les connaissances
+              scientifiques acquises entre 2015 et 2021 sur le changement climatique, ses causes, ses impacts et les
+              mesures possibles pour l’atténuer et s’y adapter.</em>(
             <a
               href="https://www.ecologie.gouv.fr/publication-du-6e-rapport-synthese-du-giec#:~:text=La%20synthèse%20du%20sixième%20rapport,195%20pays%20membres%20du%20GIEC">Article</a>
-            du ministère de l’écologie.
+            du ministère de l’écologie.)
             Que se passerait-il si la température globale de notre planète augmentait de 1.5 °C ? de 4°C ? Quel est le
             scénario le plus probable ? Quel est le chemin à suivre ?
             Ce sont des questions comme celle-ci que se sont posés les experts du groupe.
@@ -303,10 +303,10 @@
           (Vous pouvez <a href="#post-ela">passer</a> le graphique)
         </p>
         <div class="tab">
-          <a class="tablinks" onclick="openTabELA(event, 'glacier-ela1')">Mer de Glace</a>
-          <a class="tablinks" onclick="openTabELA(event, 'glacier-ela2')">Las Neous</a>
-          <a class="tablinks" onclick="openTabELA(event, 'glacier-ela3')">Perito Moreno</a>
-          <a class="tablinks" onclick="openTabELA(event, 'glacier-ela4')">Ross</a>
+          <a class="tablinks" onclick="openTab(event, 'glacier-ela1','tabcontent-ela')">Mer de Glace</a>
+          <a class="tablinks" onclick="openTab(event, 'glacier-ela2','tabcontent-ela')">Las Neous</a>
+          <a class="tablinks" onclick="openTab(event, 'glacier-ela3','tabcontent-ela')">Perito Moreno</a>
+          <a class="tablinks" onclick="openTab(event, 'glacier-ela4','tabcontent-ela')">Ross</a>
           <icon>
             <img src="{{ url_for('static', filename='images/icon_highlight_mouse_cursor.png') }}" width="32px"
               margin="0 0.5rem" alt="Icon d'intéraction avec les animations" />
@@ -352,10 +352,10 @@
           Plus la couleur tend vers le bleu, plus l'épaisseur de glace est fine.
         </legend>
         <div class="tab">
-          <a class="tablinks" onclick="openGlacier(event, 'glacier1')">Mer de Glace</a>
-          <a class="tablinks" onclick="openGlacier(event, 'glacier2')">Las Neous</a>
-          <a class="tablinks" onclick="openGlacier(event, 'glacier3')">Perito Moreno</a>
-          <a class="tablinks" onclick="openGlacier(event, 'glacier4')">Ross</a>
+          <a class="tablinks" onclick="openTab(event, 'glacier1','tabcontent')">Mer de Glace</a>
+          <a class="tablinks" onclick="openTab(event, 'glacier2','tabcontent')">Las Neous</a>
+          <a class="tablinks" onclick="openTab(event, 'glacier3','tabcontent')">Perito Moreno</a>
+          <a class="tablinks" onclick="openTab(event, 'glacier4','tabcontent')">Ross</a>
           <icon>
             <img src="{{ url_for('static', filename='images/icon_highlight_mouse_cursor.png') }}" width="32px"
               margin="0 0.5rem" alt="Icon d'intéraction avec les animations" />
@@ -494,10 +494,10 @@
             </td>
             <td>
               <div class="tab">
-                <a class="tablinks" onclick="openSSP126(event, 'mdg-ssp-126')">Mer de glace</a>
-                <a class="tablinks" onclick="openSSP126(event, 'lasneous-ssp-126')">Las Neous</a>
-                <a class="tablinks" onclick="openSSP126(event, 'perito-ssp-126')">Perito Moreno</a>
-                <a class="tablinks" onclick="openSSP126(event, 'ross-ssp-126')">Ross</a>
+                <a class="tablinks" onclick="openTab(event, 'mdg-ssp-126','tabcontent-ssp-126')">Mer de glace</a>
+                <a class="tablinks" onclick="openTab(event, 'lasneous-ssp-126','tabcontent-ssp-126')">Las Neous</a>
+                <a class="tablinks" onclick="openTab(event, 'perito-ssp-126','tabcontent-ssp-126')">Perito Moreno</a>
+                <a class="tablinks" onclick="openTab(event, 'ross-ssp-126','tabcontent-ssp-126')">Ross</a>
                 <icon>
                   <img src="{{ url_for('static', filename='images/icon_highlight_mouse_cursor.png') }}" width="32px"
                     margin="0 0.5rem" alt="Icon d'intéraction avec les animations" />
@@ -548,10 +548,10 @@
           <tr>
             <td>
               <div class="tab">
-                <a class="tablinks" onclick="openSSP370(event, 'mdg-ssp-370')">Mer de Glace</a>
-                <a class="tablinks" onclick="openSSP370(event, 'lasneous-ssp-370')">Las Neous</a>
-                <a class="tablinks" onclick="openSSP370(event, 'perito-ssp-370')">Perito Moreno</a>
-                <a class="tablinks" onclick="openSSP370(event, 'ross-ssp-370')">Ross</a>
+                <a class="tablinks" onclick="openTab(event, 'mdg-ssp-370','tabcontent-ssp-370')">Mer de Glace</a>
+                <a class="tablinks" onclick="openTab(event, 'lasneous-ssp-370','tabcontent-ssp-370')">Las Neous</a>
+                <a class="tablinks" onclick="openTab(event, 'perito-ssp-370','tabcontent-ssp-370')">Perito Moreno</a>
+                <a class="tablinks" onclick="openTab(event, 'ross-ssp-370','tabcontent-ssp-370')">Ross</a>
                 <icon>
                   <img src="{{ url_for('static', filename='images/icon_highlight_mouse_cursor.png') }}" width="32px"
                     margin="0 0.5rem" alt="Icon d'intéraction avec les animations" />
@@ -628,10 +628,10 @@
             </td>
             <td>
               <div class="tab">
-                <a class="tablinks" onclick="openSSP585(event, 'mdg-ssp-585')">Mer de Glace</a>
-                <a class="tablinks" onclick="openSSP585(event, 'lasneous-ssp-585')">Las Neous</a>
-                <a class="tablinks" onclick="openSSP585(event, 'perito-ssp-585')">Perito Moreno</a>
-                <a class="tablinks" onclick="openSSP585(event, 'ross-ssp-585')">Ross</a>
+                <a class="tablinks" onclick="openTab(event, 'mdg-ssp-585','tabcontent-ssp-585')">Mer de Glace</a>
+                <a class="tablinks" onclick="openTab(event, 'lasneous-ssp-585','tabcontent-ssp-585')">Las Neous</a>
+                <a class="tablinks" onclick="openTab(event, 'perito-ssp-585','tabcontent-ssp-585')">Perito Moreno</a>
+                <a class="tablinks" onclick="openTab(event, 'ross-ssp-585','tabcontent-ssp-585')">Ross</a>
                 <icon>
                   <img src="{{ url_for('static', filename='images/icon_highlight_mouse_cursor.png') }}" width="32px"
                     alt="Icon d'intéraction avec les animations" />
@@ -889,95 +889,32 @@
         </p>
         <p>
           Voilà une carte de l’Europe qui vous présente les zones qui seraient impactées.
-          </legend>
         <div class="tab">
-          <a class="tablinks" onclick="openSSP_mer(event, 'evolution-ssp-126')">SSP 1-2.6</a>
-          <a class="tablinks" onclick="openSSP_mer(event, 'evolution-ssp-370')">SSP 3-7.0</a>
-          <a class="tablinks" onclick="openSSP_mer(event, 'evolution-ssp-585')">SSP 5-8.8</a>
+          <a class="tablinks" onclick="openTab(event, 'mer-ssp-126','tabcontent-niveau-mer')">SSP 1-2.6</a>
+          <a class="tablinks" onclick="openTab(event, 'mer-ssp-370','tabcontent-niveau-mer')">SSP 3-7.0</a>
+          <a class="tablinks" onclick="openTab(event, 'mer-ssp-585','tabcontent-niveau-mer')">SSP 5-8.5</a>
           <icon>
             <img src="{{ url_for('static', filename='images/icon_highlight_mouse_cursor.png') }}" width="32px"
               margin="0 0.5rem" alt="Icon d'intéraction avec les animations" />
           </icon>
         </div>
-
-        <div id="evolution-ssp-126" class="tabcontent-ssp">
-          <table>
-            <tr>
-              <td>
-                <div id="niveau_mer_ssp126" class="anim-container">
-                  {% include 'niveau_mer_ssp126.html' %}
-                  <legend>Evolution du niveau de la Mer en Europe - SSP126</legend>
-                </div>
-              <td>
-                <div id="ssp-126-mer" class="focus">
-                  <h3>SSP 1-2.6</h3>
-                  <p>
-                    Le scénario SSP 126 est basé sur une tendance relativement optimiste avec des investissements dans
-                    l'éducation et la santé, une croissance économique rapide et un bon fonctionnement des institutions,
-                    et en particulier une évolution croissante vers des pratiques durables.
-                    <br>
-                    Le niveau de réchauffement considéré par ce scénario est de 1.8°C d'ici 2100.
-                  </p>
-                </div>
-              </td>
-            </tr>
-          </table>
+        <div id="mer-ssp-126" class="tabcontent-niveau-mer">
+          <div class="illustration-container">
+            {% include 'niveau_mer_ssp126.html' %}
+            <legend>Evolution du niveau de la mer/océan en Europe - SSP1-2.6</legend>
+          </div>
         </div>
-
-        <div id="evolution-ssp-370" class="tabcontent-ssp">
-          <table>
-            <tr>
-              <td>
-                <div id="niveau_mer_ssp370" class="anim-container">
-                  {% include 'niveau_mer_ssp370.html' %}
-                  <legend>Evolution du niveau de la Mer en Europe - SSP370</legend>
-                </div>
-              </td>
-              <td>
-                <div id="ssp-370-mer" class="focus">
-                  <h3>SSP 3-7.0</h3>
-                  <p>
-                    Le scénario SSP370 est basé sur une tendance de développement plus pessimistes, avec peu
-                    d'investissements dans l'éducation ou la santé, une croissance démographique rapide et des
-                    inégalités
-                    croissantes. Les pays donnent la priorité à la sécurité régionale ce qui conduit à des sociétés
-                    hautement vulnérables au changement climatique.
-                    <br>
-                    Le niveau de réchauffement considéré par ce scénario est de 3.6°C d'ici 2100.
-                  </p>
-                </div>
-              </td>
-            </tr>
-          </table>
+        <div id="mer-ssp-370" class="tabcontent-niveau-mer">
+          <div class="illustration-container">
+            {% include 'niveau_mer_ssp370.html' %}
+            <legend>Evolution du niveau de la mer/océan en Europe - SSP3-7.0</legend>
+          </div>
         </div>
-
-        <div id="evolution-ssp-585" class="tabcontent-ssp">
-          <table>
-            <tr>
-              <td>
-                <div id="niveau_mer_ssp585" class="anim-container">
-                  {% include 'niveau_mer_ssp585.html' %}
-                  <legend>Evolution du niveau de la Mer en Europe - SSP585</legend>
-                </div>
-                </p>
-              </td>
-              <td>
-                <div id="ssp-585-mer" class="focus">
-                  <h3>SSP 5-8.5</h3>
-                  <p>
-                    Le scénario SSP585 est très similaire au scénario SSP1(2.6). Il est basé sur une tendance
-                    relativement
-                    optimiste avec des investissements dans l'éducation et la santé, une croissance économique rapide et
-                    un bon fonctionnement des institutions. Cependant, il suppose une économie basée sur l'énergie et
-                    les
-                    combustibles fossiles (pétrole, charbon, gaz naturel).
-                    <br>
-                    Le niveau de réchauffement considéré par ce scénario est de 4.4°C d'ici 2100.
-                  </p>
-                </div>
-              </td>
-            </tr>
-          </table>
+        <div id="mer-ssp-585" class="tabcontent-niveau-mer">
+          <div class="illustration-container">
+            {% include 'niveau_mer_ssp585.html' %}
+            <legend>Evolution du niveau de la mer/océan en Europe - SSP5-8.5</legend>
+          </div>
         </div>
         <p>
           Mais ce problème n’est pas le seul, des problèmes bien plus insidieux pourrait arriver avec la fonte de
@@ -996,14 +933,15 @@
         </h3>
         <p>
           Nous avons le pouvoir d'agir à petite échelle. Par notre consommation et nos actes.
-          Mais le plus important reste de faire comprendre aux personnes qui nous diroge l'importance du changement
+          Mais le plus important reste de faire comprendre aux personnes qui nous dirige l'importance du changement
           climatique.
-          Il ffau réussir à faire agir les grands acteurs (états, entreprises).
+          Il faut réussir à faire agir les grands acteurs (états, entreprises).
         </p>
         <div id="thanks" class="focus">
           <h4>Merci !</h4>
           <p>
-            Merci au Projet OGGM sans qui nous n'auront pas pu faire toutes les prédictions et les études.
+            Merci au <a href="https://docs.oggm.org/en/stable/index.html">Projet OGGM</a> sans qui nous n'auront pas pu
+            faire toutes les prédictions et les études.
             Aux contributeurs de la bases de données DOI-WGMS.
           </p>
         </div>
