@@ -252,6 +252,31 @@
               margin="0 0.5rem" alt="Icon d'intéraction avec les animations" />
           </icon>
           <iframe src="/dash" width="100%" height="600"></iframe>
+
+          <br>
+          <div id="correlation" class="focus">
+            <h3>Corrélations (sans cause ni effet liés)</h3>
+
+            <div class="two-columns">
+              <div class="right-part">
+                <div class="illustration-container">
+                  <img
+                    src="{{ url_for('static', filename='images/evolution-du-volume-de-la-mer-de-glace-en-fonction-du-temps_correlates-with_milk-consumption.svg') }}"
+                    alt="Illustration" width="80%">
+                  <legend>Généré grâce à l'outil fourni par Tyler Vigen et des données d'OGGM</legend>
+                </div>
+              </div>
+              <div class="left-part">
+                <div class="illustration-container">
+                  <img
+                    src="{{ url_for('static', filename='images/evolution-du-volume-de-la-mer-de-glace-en-fonction-du-temps_correlates-with_us-birth-rates-of-triplets-or-more.svg') }}"
+                    alt="Illustration" width="80%">
+                  <legend>Généré grâce à l'outil fourni par Tyler Vigen et des données d'OGGM</legend>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
       </section>
       <hr>
       <section id="section_3" class="section-container">
@@ -692,34 +717,34 @@
           rare, les glaciers relachent leur eau, l'eau de fonte, sous l'effet de la chaleur. Cette eau permet à
           l'écosystème de
           bénéficier de cette ressource qu'il lui manque pour survivre.</p>
-        
-          <div class="tab">
-            <a class="tablinks" onclick="openTab(event, 'flux-ssp-126','tabcontent-flux')">SSP 1-2.6</a>
-            <a class="tablinks" onclick="openTab(event, 'flux-ssp-370','tabcontent-flux')">SSP 3-7.0</a>
-            <a class="tablinks" onclick="openTab(event, 'flux-ssp-585','tabcontent-flux')">SSP 5-8.5</a>
-            <icon>
-              <img src="{{ url_for('static', filename='images/icon_highlight_mouse_cursor.png') }}" width="32px"
-                margin="0 0.5rem" alt="Icon d'intéraction avec les animations" />
-            </icon>
+
+        <div class="tab">
+          <a class="tablinks" onclick="openTab(event, 'flux-ssp-126','tabcontent-flux')">SSP 1-2.6</a>
+          <a class="tablinks" onclick="openTab(event, 'flux-ssp-370','tabcontent-flux')">SSP 3-7.0</a>
+          <a class="tablinks" onclick="openTab(event, 'flux-ssp-585','tabcontent-flux')">SSP 5-8.5</a>
+          <icon>
+            <img src="{{ url_for('static', filename='images/icon_highlight_mouse_cursor.png') }}" width="32px"
+              margin="0 0.5rem" alt="Icon d'intéraction avec les animations" />
+          </icon>
+        </div>
+        <div id="flux-ssp-126" class="tabcontent-flux">
+          <div class="illustration-container">
+            {% include 'flux/flux_rivieres_ssp126.html' %}
+            <legend>Evolution du lit d'une rivière - SSP1-2.6</legend>
           </div>
-          <div id="flux-ssp-126" class="tabcontent-flux">
-            <div class="illustration-container">
-              {% include 'flux/flux_rivieres_ssp126.html' %}
-              <legend>Evolution du lit d'une rivière - SSP1-2.6</legend>
-            </div>
+        </div>
+        <div id="flux-ssp-370" class="tabcontent-flux">
+          <div class="illustration-container">
+            {% include 'flux/flux_rivieres_ssp370.html' %}
+            <legend>Evolution du lit d'une rivière - SSP3-7.0</legend>
           </div>
-          <div id="flux-ssp-370" class="tabcontent-flux">
-            <div class="illustration-container">
-              {% include 'flux/flux_rivieres_ssp370.html' %}
-              <legend>Evolution du lit d'une rivière - SSP3-7.0</legend>
-            </div>
+        </div>
+        <div id="flux-ssp-585" class="tabcontent-flux">
+          <div class="illustration-container">
+            {% include 'flux/flux_rivieres_ssp585.html' %}
+            <legend>Evolution du lit d'une rivière - SSP5-8.5</legend>
           </div>
-          <div id="flux-ssp-585" class="tabcontent-flux">
-            <div class="illustration-container">
-              {% include 'flux/flux_rivieres_ssp585.html' %}
-              <legend>Evolution du lit d'une rivière - SSP5-8.5</legend>
-            </div>
-          </div>
+        </div>
 
         <p>L'augmentation des température, notamment, est responsable de l'asséchement des sols et d'une plus forte
           évaporation de l'eau, ce qui entraîne une réduction du volume d'eau dans les cours d'eau. Heureusement,
@@ -769,7 +794,7 @@
               Ces différents moyens d’éliminations présentent
               chacune leur spécificités et problèmes. Le vêlage peut causer des problèmes lors de la chute de blocs, la
               fonte de la couche inférieure crée de l’instabilité au sein du glacier, instabilité pouvant mener à des
-              glissements ainsi que des éboulements… 
+              glissements ainsi que des éboulements…
             </p>
           </div>
           <div class="right-part">
@@ -876,15 +901,23 @@
             Merci au <a href="https://docs.oggm.org/en/stable/index.html">Projet OGGM</a> sans qui nous n'auront pas pu
             faire toutes les prédictions et les études.
             <br>
-            <blockquote>
-              Aux contributeurs de la bases de données DOI-WGMS.
-              <br>
-              Pour la compréhension des facteurs : <a href="https://blogpatagonie.australis.com/facteurs-climatiques-affectent-recul-glaciers/">Blog Patagonie</a>.
-              <br>
-              Pour les indicateurs : <a href="https://www.encyclopedie-environnement.org/climat/glaciers-montagne-changements-climatiques/">Encyclopédie de l'environnement</a>, <a href="https://www.antarcticglaciers.org/glaciers-and-climate/numerical-ice-sheet-models/modelling-glacier-melt/">antarcticglaciers.org</a>.
-              <br>
-              Pour les revues et documentaires: <a href="https://www.science.org/doi/epdf/10.1126/science.abo1324">Science.org</a>, <a href="https://www.youtube.com/watch?v=FIyqQgLLdF4&pp=ygUMYXJ0ZSBnbGFjaWVy">La fonte des glaces : quel impact ? Arte</a>
-            </blockquote>
+          <blockquote>
+            Aux contributeurs de la bases de données DOI-WGMS.
+            <br>
+            Pour la compréhension des facteurs : <a
+              href="https://blogpatagonie.australis.com/facteurs-climatiques-affectent-recul-glaciers/">Blog
+              Patagonie</a>.
+            <br>
+            Pour les indicateurs : <a
+              href="https://www.encyclopedie-environnement.org/climat/glaciers-montagne-changements-climatiques/">Encyclopédie
+              de l'environnement</a>, <a
+              href="https://www.antarcticglaciers.org/glaciers-and-climate/numerical-ice-sheet-models/modelling-glacier-melt/">antarcticglaciers.org</a>.
+            <br>
+            Pour les revues et documentaires: <a
+              href="https://www.science.org/doi/epdf/10.1126/science.abo1324">Science.org</a>, <a
+              href="https://www.youtube.com/watch?v=FIyqQgLLdF4&pp=ygUMYXJ0ZSBnbGFjaWVy">La fonte des glaces : quel
+              impact ? Arte</a>
+          </blockquote>
           </p>
         </div>
       </section>
