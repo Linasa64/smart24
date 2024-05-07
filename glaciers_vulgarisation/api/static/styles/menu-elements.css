@@ -29,6 +29,7 @@ nav ul li a {
       border-bottom: 1px solid #160f29;
       white-space: normal;
       min-width: 12rem;
+      font-weight: normal;
 }
 nav ul li a.current {
       background:  #a9c4de;
