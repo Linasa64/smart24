@@ -481,7 +481,7 @@
         <table>
           <tr>
             <td>
-              <div id="ssp-126" class="focus">
+              <div id="ssp-126-volume" class="focus">
                 <h3>SSP 1-2.6</h3>
                 <p>
                   Le scénario SSP 126 est basé sur une tendance relativement optimiste avec des investissements dans
@@ -599,7 +599,7 @@
               </div>
             </td>
             <td>
-              <div id="ssp-370" class="focus">
+              <div id="ssp-370-volume" class="focus">
                 <h3>SSP 3-7.0</h3>
                 <p>
                   Le scénario SSP370 est basé sur une tendance de développement plus pessimistes, avec peu
@@ -614,7 +614,7 @@
           </tr>
           <tr>
             <td>
-              <div id="ssp-585" class="focus">
+              <div id="ssp-585-volume" class="focus">
                 <h3>SSP 5-8.5</h3>
                 <p>
                   Le scénario SSP585 est très similaire au scénario SSP1(2.6). Il est basé sur une tendance relativement
@@ -680,6 +680,106 @@
             </td>
           </tr>
         </table>
+
+        <p>Mais où part toute cette eau ? Pour une bonne partie, nous la retrouvons dans les courants d'eau. Après avoir
+          ruisselé dans le glacier, l'eau de font se retrouve dans les ruisseaux, puis les rivières, et enfin les
+          fleuves avant de se jeter dans la mer et dans l'océan.</p>
+
+        <p>Un </p>
+
+
+        <div class="tab">
+          <a class="tablinks" onclick="openSSP_flux(event, 'flux-ssp-126')">SSP 1-2.6</a>
+          <a class="tablinks" onclick="openSSP_flux(event, 'flux-ssp-370')">SSP 3-7.0</a>
+          <a class="tablinks" onclick="openSSP_flux(event, 'flux-ssp-585')">SSP 5-8.8</a>
+          <icon>
+            <img src="{{ url_for('static', filename='images/icon_highlight_mouse_cursor.png') }}" width="32px"
+              margin="0 0.5rem" alt="Icon d'intéraction avec les animations" />
+          </icon>
+        </div>
+
+        <div id="flux-ssp-126" class="tabcontent-flux-ssp">
+          <table>
+            <tr>
+              <td>
+                <div id="flux_riviere_ssp126" class="anim-container">
+                  {% include 'flux/flux_rivieres_ssp126.html' %}
+                  <legend>Evolution du niveau de la Mer en Europe - SSP126</legend>
+                </div>
+              <td>
+                <div id="ssp-126-flux" class="focus">
+                  <h3>SSP 1-2.6</h3>
+                  <p>
+                    Le scénario SSP 126 est basé sur une tendance relativement optimiste avec des investissements dans
+                    l'éducation et la santé, une croissance économique rapide et un bon fonctionnement des institutions,
+                    et en particulier une évolution croissante vers des pratiques durables.
+                    <br>
+                    Le niveau de réchauffement considéré par ce scénario est de 1.8°C d'ici 2100.
+                  </p>
+                </div>
+              </td>
+            </tr>
+          </table>
+        </div>
+
+        <div id="flux-ssp-370" class="tabcontent-flux-ssp">
+          <table>
+            <tr>
+              <td>
+                <div id="flux_riviere_ssp370" class="anim-container">
+                  {% include 'flux/flux_rivieres_ssp370.html' %}
+                  <legend>Evolution du niveau de la Mer en Europe - SSP370</legend>
+                </div>
+              </td>
+              <td>
+                <div id="ssp-370-flux" class="focus">
+                  <h3>SSP 3-7.0</h3>
+                  <p>
+                    Le scénario SSP370 est basé sur une tendance de développement plus pessimistes, avec peu
+                    d'investissements dans l'éducation ou la santé, une croissance démographique rapide et des
+                    inégalités
+                    croissantes. Les pays donnent la priorité à la sécurité régionale ce qui conduit à des sociétés
+                    hautement vulnérables au changement climatique.
+                    <br>
+                    Le niveau de réchauffement considéré par ce scénario est de 3.6°C d'ici 2100.
+                  </p>
+                </div>
+              </td>
+            </tr>
+          </table>
+        </div>
+
+        <div id="flux-ssp-585" class="tabcontent-flux-ssp">
+          <table>
+            <tr>
+              <td>
+                <div id="flux_riviere_ssp585" class="anim-container">
+                  {% include 'flux/flux_rivieres_ssp585.html' %}
+                  <legend>Evolution du niveau de la Mer en Europe - SSP585</legend>
+                </div>
+                </p>
+              </td>
+              <td>
+                <div id="ssp-585-flux" class="focus">
+                  <h3>SSP 5-8.5</h3>
+                  <p>
+                    Le scénario SSP585 est très similaire au scénario SSP1(2.6). Il est basé sur une tendance
+                    relativement
+                    optimiste avec des investissements dans l'éducation et la santé, une croissance économique rapide et
+                    un bon fonctionnement des institutions. Cependant, il suppose une économie basée sur l'énergie et
+                    les
+                    combustibles fossiles (pétrole, charbon, gaz naturel).
+                    <br>
+                    Le niveau de réchauffement considéré par ce scénario est de 4.4°C d'ici 2100.
+                  </p>
+                </div>
+              </td>
+            </tr>
+          </table>
+        </div>
+
+
+
       </section>
       <hr>
       <section id="section_6" class="section-container">
@@ -764,9 +864,9 @@
           Voilà une carte de l’Europe qui vous présente les zones qui seraient impactées.
           </legend>
         <div class="tab">
-          <a class="tablinks" onclick="openSSP(event, 'evolution-ssp-126')">SSP 1-2.6</a>
-          <a class="tablinks" onclick="openSSP(event, 'evolution-ssp-370')">SSP 3-7.0</a>
-          <a class="tablinks" onclick="openSSP(event, 'evolution-ssp-585')">SSP 5-8.8</a>
+          <a class="tablinks" onclick="openSSP_mer(event, 'evolution-ssp-126')">SSP 1-2.6</a>
+          <a class="tablinks" onclick="openSSP_mer(event, 'evolution-ssp-370')">SSP 3-7.0</a>
+          <a class="tablinks" onclick="openSSP_mer(event, 'evolution-ssp-585')">SSP 5-8.8</a>
           <icon>
             <img src="{{ url_for('static', filename='images/icon_highlight_mouse_cursor.png') }}" width="32px"
               margin="0 0.5rem" alt="Icon d'intéraction avec les animations" />
@@ -782,7 +882,7 @@
                   <legend>Evolution du niveau de la Mer en Europe - SSP126</legend>
                 </div>
               <td>
-                <div id="ssp-126" class="focus">
+                <div id="ssp-126-mer" class="focus">
                   <h3>SSP 1-2.6</h3>
                   <p>
                     Le scénario SSP 126 est basé sur une tendance relativement optimiste avec des investissements dans
@@ -807,7 +907,7 @@
                 </div>
               </td>
               <td>
-                <div id="ssp-370" class="focus">
+                <div id="ssp-370-mer" class="focus">
                   <h3>SSP 3-7.0</h3>
                   <p>
                     Le scénario SSP370 est basé sur une tendance de développement plus pessimistes, avec peu
@@ -835,7 +935,7 @@
                 </p>
               </td>
               <td>
-                <div id="ssp-585" class="focus">
+                <div id="ssp-585-mer" class="focus">
                   <h3>SSP 5-8.5</h3>
                   <p>
                     Le scénario SSP585 est très similaire au scénario SSP1(2.6). Il est basé sur une tendance

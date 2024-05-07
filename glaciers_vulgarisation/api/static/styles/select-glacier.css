@@ -32,11 +32,11 @@
     padding: 6px 12px;
   }
 
-  #glacier-ela1, #glacier1, #mdg-ssp-126,#mdg-ssp-370,#mdg-ssp-585, #evolution-ssp-126{
+  #glacier-ela1, #glacier1, #mdg-ssp-126,#mdg-ssp-370,#mdg-ssp-585, #evolution-ssp-126, #flux-ssp-126{
     display: block;
   }
 
-  #evolution-ssp-370, #evolution-ssp-585{
+  #evolution-ssp-370, #evolution-ssp-585, flux-ssp-370, flux-ssp-585{
     display: none;
   }
 
