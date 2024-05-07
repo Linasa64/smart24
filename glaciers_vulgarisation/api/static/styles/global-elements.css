@@ -35,7 +35,7 @@ header img {
 
 main{
       display: block;
-      padding: 50px;
+      padding: 2rem;
 }
 
 .container {
@@ -68,14 +68,15 @@ img{
       display: block;
       align-self: center;
       box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
-      margin: 0 0.5rem;
       float: right;
 }
 
 icon {
-      box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
-      margin: 0 0.5rem;
-      float: right;
+      margin: 0.5rem 0.5rem;
+}
+
+.animation {
+      min-width: 25rem;
 }
 
 .focus

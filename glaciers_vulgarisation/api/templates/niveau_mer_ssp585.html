@@ -144,13 +144,13 @@
 
 <style>
   .animation {
-    width: max-content;
+    max-width: 20rem;
     display: inline-block;
     text-align: center;
   }
 
   input[type=range].anim-slider {
-    width: 374px;
+    width: 20rem;
     margin-left: auto;
     margin-right: auto;
   }
@@ -179,39 +179,8 @@
   <div class="anim-controls">
     <input id="_anim_sliderfc8daea25c2f46248d5974fc18b235ba" type="range" class="anim-slider" name="points" min="0"
       max="1" step="1" value="0" oninput="animfc8daea25c2f46248d5974fc18b235ba.set_frame(parseInt(this.value));">
-    <div class="anim-buttons">
-      <button title="Decrease speed" aria-label="Decrease speed"
-        onclick="animfc8daea25c2f46248d5974fc18b235ba.slower()">
-        <i class="fa fa-minus"></i></button>
-      <button title="First frame" aria-label="First frame" onclick="animfc8daea25c2f46248d5974fc18b235ba.first_frame()">
-        <i class="fa fa-fast-backward"></i></button>
-      <button title="Previous frame" aria-label="Previous frame"
-        onclick="animfc8daea25c2f46248d5974fc18b235ba.previous_frame()">
-        <i class="fa fa-step-backward"></i></button>
-      <button title="Play backwards" aria-label="Play backwards"
-        onclick="animfc8daea25c2f46248d5974fc18b235ba.reverse_animation()">
-        <i class="fa fa-play fa-flip-horizontal"></i></button>
-      <button title="Pause" aria-label="Pause" onclick="animfc8daea25c2f46248d5974fc18b235ba.pause_animation()">
-        <i class="fa fa-pause"></i></button>
-      <button title="Play" aria-label="Play" onclick="animfc8daea25c2f46248d5974fc18b235ba.play_animation()">
-        <i class="fa fa-play"></i></button>
-      <button title="Next frame" aria-label="Next frame" onclick="animfc8daea25c2f46248d5974fc18b235ba.next_frame()">
-        <i class="fa fa-step-forward"></i></button>
-      <button title="Last frame" aria-label="Last frame" onclick="animfc8daea25c2f46248d5974fc18b235ba.last_frame()">
-        <i class="fa fa-fast-forward"></i></button>
-      <button title="Increase speed" aria-label="Increase speed"
-        onclick="animfc8daea25c2f46248d5974fc18b235ba.faster()">
-        <i class="fa fa-plus"></i></button>
-    </div>
-    <form title="Repetition mode" aria-label="Repetition mode" action="#n"
-      name="_anim_loop_selectfc8daea25c2f46248d5974fc18b235ba" class="anim-state">
-      <input type="radio" name="state" value="once" id="_anim_radio1_fc8daea25c2f46248d5974fc18b235ba">
-      <label for="_anim_radio1_fc8daea25c2f46248d5974fc18b235ba">Once</label>
-      <input type="radio" name="state" value="loop" id="_anim_radio2_fc8daea25c2f46248d5974fc18b235ba" checked>
-      <label for="_anim_radio2_fc8daea25c2f46248d5974fc18b235ba">Loop</label>
-      <input type="radio" name="state" value="reflect" id="_anim_radio3_fc8daea25c2f46248d5974fc18b235ba">
-      <label for="_anim_radio3_fc8daea25c2f46248d5974fc18b235ba">Reflect</label>
-    </form>
+    
+    
   </div>
 </div>
 
