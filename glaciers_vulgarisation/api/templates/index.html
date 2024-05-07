@@ -691,99 +691,36 @@
           températures augmentent et que l'eau se fait plus
           rare, les glaciers relachent leur eau, l'eau de fonte, sous l'effet de la chaleur. Cette eau permet à
           l'écosystème de
-          bénéficier de cette ressource qu'il lui manque pour survivre.
-          rare</p>
+          bénéficier de cette ressource qu'il lui manque pour survivre.</p>
+        
+          <div class="tab">
+            <a class="tablinks" onclick="openTab(event, 'flux-ssp-126','tabcontent-flux')">SSP 1-2.6</a>
+            <a class="tablinks" onclick="openTab(event, 'flux-ssp-370','tabcontent-flux')">SSP 3-7.0</a>
+            <a class="tablinks" onclick="openTab(event, 'flux-ssp-585','tabcontent-flux')">SSP 5-8.5</a>
+            <icon>
+              <img src="{{ url_for('static', filename='images/icon_highlight_mouse_cursor.png') }}" width="32px"
+                margin="0 0.5rem" alt="Icon d'intéraction avec les animations" />
+            </icon>
+          </div>
+          <div id="flux-ssp-126" class="tabcontent-flux">
+            <div class="illustration-container">
+              {% include 'flux/flux_rivieres_ssp126.html' %}
+              <legend>Evolution du lit d'une rivière - SSP1-2.6</legend>
+            </div>
+          </div>
+          <div id="flux-ssp-370" class="tabcontent-flux">
+            <div class="illustration-container">
+              {% include 'flux/flux_rivieres_ssp370.html' %}
+              <legend>Evolution du lit d'une rivière - SSP3-7.0</legend>
+            </div>
+          </div>
+          <div id="flux-ssp-585" class="tabcontent-flux">
+            <div class="illustration-container">
+              {% include 'flux/flux_rivieres_ssp585.html' %}
+              <legend>Evolution du lit d'une rivière - SSP5-8.5</legend>
+            </div>
+          </div>
 
-
-        <div class="tab">
-          <a class="tablinks" onclick="openSSP_flux(event, 'flux-ssp-126')">SSP 1-2.6</a>
-          <a class="tablinks" onclick="openSSP_flux(event, 'flux-ssp-370')">SSP 3-7.0</a>
-          <a class="tablinks" onclick="openSSP_flux(event, 'flux-ssp-585')">SSP 5-8.8</a>
-          <icon>
-            <img src="{{ url_for('static', filename='images/icon_highlight_mouse_cursor.png') }}" width="32px"
-              margin="0 0.5rem" alt="Icon d'intéraction avec les animations" />
-          </icon>
-        </div>
-
-        <div id="flux-ssp-126" class="tabcontent-flux-ssp">
-          <table>
-            <tr>
-              <td>
-                <div id="flux_riviere_ssp126" class="anim-container">
-                  {% include 'flux/flux_rivieres_ssp126.html' %}
-                  <legend>Evolution du niveau de la Mer en Europe - SSP126</legend>
-                </div>
-              <td>
-                <div id="ssp-126-flux" class="focus">
-                  <h3>SSP 1-2.6</h3>
-                  <p>
-                    Le scénario SSP 126 est basé sur une tendance relativement optimiste avec des investissements dans
-                    l'éducation et la santé, une croissance économique rapide et un bon fonctionnement des institutions,
-                    et en particulier une évolution croissante vers des pratiques durables.
-                    <br>
-                    Le niveau de réchauffement considéré par ce scénario est de 1.8°C d'ici 2100.
-                  </p>
-                </div>
-              </td>
-            </tr>
-          </table>
-        </div>
-
-        <div id="flux-ssp-370" class="tabcontent-flux-ssp">
-          <table>
-            <tr>
-              <td>
-                <div id="flux_riviere_ssp370" class="anim-container">
-                  {% include 'flux/flux_rivieres_ssp370.html' %}
-                  <legend>Evolution du niveau de la Mer en Europe - SSP370</legend>
-                </div>
-              </td>
-              <td>
-                <div id="ssp-370-flux" class="focus">
-                  <h3>SSP 3-7.0</h3>
-                  <p>
-                    Le scénario SSP370 est basé sur une tendance de développement plus pessimistes, avec peu
-                    d'investissements dans l'éducation ou la santé, une croissance démographique rapide et des
-                    inégalités
-                    croissantes. Les pays donnent la priorité à la sécurité régionale ce qui conduit à des sociétés
-                    hautement vulnérables au changement climatique.
-                    <br>
-                    Le niveau de réchauffement considéré par ce scénario est de 3.6°C d'ici 2100.
-                  </p>
-                </div>
-              </td>
-            </tr>
-          </table>
-        </div>
-
-        <div id="flux-ssp-585" class="tabcontent-flux-ssp">
-          <table>
-            <tr>
-              <td>
-                <div id="flux_riviere_ssp585" class="anim-container">
-                  {% include 'flux/flux_rivieres_ssp585.html' %}
-                  <legend>Evolution du niveau de la Mer en Europe - SSP585</legend>
-                </div>
-                </p>
-              </td>
-              <td>
-                <div id="ssp-585-flux" class="focus">
-                  <h3>SSP 5-8.5</h3>
-                  <p>
-                    Le scénario SSP585 est très similaire au scénario SSP1(2.6). Il est basé sur une tendance
-                    relativement
-                    optimiste avec des investissements dans l'éducation et la santé, une croissance économique rapide et
-                    un bon fonctionnement des institutions. Cependant, il suppose une économie basée sur l'énergie et
-                    les
-                    combustibles fossiles (pétrole, charbon, gaz naturel).
-                    <br>
-                    Le niveau de réchauffement considéré par ce scénario est de 4.4°C d'ici 2100.
-                  </p>
-                </div>
-              </td>
-            </tr>
-          </table>
-        </div>
         <p>L'augmentation des température, notamment, est responsable de l'asséchement des sols et d'une plus forte
           évaporation de l'eau, ce qui entraîne une réduction du volume d'eau dans les cours d'eau. Heureusement,
           l'augmentation des température entraine également une fonte plus rapide des glaciers et donc un apport
@@ -832,8 +769,7 @@
               Ces différents moyens d’éliminations présentent
               chacune leur spécificités et problèmes. Le vêlage peut causer des problèmes lors de la chute de blocs, la
               fonte de la couche inférieure crée de l’instabilité au sein du glacier, instabilité pouvant mener à des
-              glissements ainsi que des éboulements… La fonte elle,impacte les cours des ruisseaux notamment sur le
-              débit.
+              glissements ainsi que des éboulements… 
             </p>
           </div>
           <div class="right-part">
@@ -847,10 +783,7 @@
               Malgré une hauteur de plus en plus, minime, le débit se veut stable au fur et à mesure
               des années.
             </p>
-            <p>
-              Il ne faut pas s’égarer, omettre, la fonte des neiges et les diverses précipitations
-              seraient une grosse erreur.
-            </p>
+            <br>
             <p>
               En prenant en compte l’ensemble des paramètres cela démontre, une tendance
               globale qui n'est pas avantageuse. Mais le comble de cette triste histoire
