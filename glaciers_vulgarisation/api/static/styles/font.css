@@ -51,6 +51,11 @@ text-align : center;
 margin: 1rem 0;
 }
 
+a{
+      color:aliceblue;
+      font-weight: bold;
+}
+
 blockquote{
       font-style: italic;
 }

@@ -32,7 +32,7 @@
     padding: 6px 12px;
   }
 
-  #glacier-ela1, #glacier1, #mdg-ssp-126,#mdg-ssp-370,#mdg-ssp-585{
+  #glacier-ela1, #glacier1, #mdg-ssp-126,#mdg-ssp-370,#mdg-ssp-585,#flux-ssp-126,#mer-ssp-126{
     display: block;
   }
 
@@ -40,6 +40,8 @@
   [id^="glacier"],
   [id^="perito-ssp"],
   [id^="lasneous-ssp"],
-  [id^="ross-ssp"]{
+  [id^="ross-ssp"],
+  [id^="flux-ssp"],
+  [id^="mer-ssp"]{
     display: none;
   }
