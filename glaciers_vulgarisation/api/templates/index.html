@@ -44,7 +44,10 @@
     <main>
       <section id="section_1" class="section-container">
         <div class="illustration-container">
-          <iframe width="560" height="315" src="https://www.youtube.com/embed/aDy9z7wYc8Y?si=EgCM6B_oaPv67lrM" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+          <iframe width="560" height="315" src="https://www.youtube.com/embed/aDy9z7wYc8Y?si=EgCM6B_oaPv67lrM"
+            title="YouTube video player" frameborder="0"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+            referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
         </div>
         <h3>Plongez dans l'histoire passée et future des géants de glace</h3>
         <table>
@@ -167,8 +170,8 @@
             Le <a href="giec">GIEC</a> a publié le 20 mars 2023 son 6ème rapport d’évaluation concernant l’évolution du
             climat.
             <em>Fruit d’une collaboration internationale, ce nouveau rapport du GIEC synthétise les connaissances
-            scientifiques acquises entre 2015 et 2021 sur le changement climatique, ses causes, ses impacts et les
-            mesures possibles pour l’atténuer et s’y adapter.</em>(
+              scientifiques acquises entre 2015 et 2021 sur le changement climatique, ses causes, ses impacts et les
+              mesures possibles pour l’atténuer et s’y adapter.</em>(
             <a
               href="https://www.ecologie.gouv.fr/publication-du-6e-rapport-synthese-du-giec#:~:text=La%20synthèse%20du%20sixième%20rapport,195%20pays%20membres%20du%20GIEC">Article</a>
             du ministère de l’écologie.)
@@ -679,37 +682,129 @@
         </table>
 
         <p>Mais où part toute cette eau ? Pour une bonne partie, nous la retrouvons dans les courants d'eau. Après avoir
-          ruisselé dans le glacier, l'eau de font se retrouve dans les ruisseaux, puis les rivières, et enfin les
+          ruisselée dans le glacier, l'eau de fonte rejoint les ruisseaux, puis les rivières, et enfin les
           fleuves avant de se jeter dans la mer et dans l'océan.</p>
 
-          <div class="tab">
-            <a class="tablinks" onclick="openTab(event, 'flux-ssp-126','tabcontent-flux')">SSP 1-2.6</a>
-            <a class="tablinks" onclick="openTab(event, 'flux-ssp-370','tabcontent-flux')">SSP 3-7.0</a>
-            <a class="tablinks" onclick="openTab(event, 'flux-ssp-585','tabcontent-flux')">SSP 5-8.5</a>
-            <icon>
-              <img src="{{ url_for('static', filename='images/icon_highlight_mouse_cursor.png') }}" width="32px"
-                margin="0 0.5rem" alt="Icon d'intéraction avec les animations" />
-            </icon>
-          </div>
-          <div id="flux-ssp-126" class="tabcontent-flux">
-            <div class="illustration-container">
-              {% include 'flux/flux_rivieres_ssp126.html' %}
-              <legend>Evolution du lit d'une rivière - SSP1-2.6</legend>
-            </div>
-          </div>
-          <div id="flux-ssp-370" class="tabcontent-flux">
-            <div class="illustration-container">
-              {% include 'flux/flux_rivieres_ssp370.html' %}
-              <legend>Evolution du lit d'une rivière - SSP3-7.0</legend>
-            </div>
-          </div>
-          <div id="flux-ssp-585" class="tabcontent-flux">
-            <div class="illustration-container">
-              {% include 'flux/flux_rivieres_ssp585.html' %}
-              <legend>Evolution du lit d'une rivière - SSP5-8.5</legend>
-            </div>
+        <p>Un phénomène intéressant à observer est le fait que la fonte des glaciers permet de compenser en partie la
+          réduction du volume d'eau dans les cours d'eau. L'hiver, les glaciers se reforment, ils gardent une grande
+          quantité d'eau douce, pour l'écosystème moins d'eau est nécessaire pour survivre. L'été, quand les
+          températures augmentent et que l'eau se fait plus
+          rare, les glaciers relachent leur eau, l'eau de fonte, sous l'effet de la chaleur. Cette eau permet à
+          l'écosystème de
+          bénéficier de cette ressource qu'il lui manque pour survivre.
+          rare</p>
 
 
+        <div class="tab">
+          <a class="tablinks" onclick="openSSP_flux(event, 'flux-ssp-126')">SSP 1-2.6</a>
+          <a class="tablinks" onclick="openSSP_flux(event, 'flux-ssp-370')">SSP 3-7.0</a>
+          <a class="tablinks" onclick="openSSP_flux(event, 'flux-ssp-585')">SSP 5-8.8</a>
+          <icon>
+            <img src="{{ url_for('static', filename='images/icon_highlight_mouse_cursor.png') }}" width="32px"
+              margin="0 0.5rem" alt="Icon d'intéraction avec les animations" />
+          </icon>
+        </div>
+
+        <div id="flux-ssp-126" class="tabcontent-flux-ssp">
+          <table>
+            <tr>
+              <td>
+                <div id="flux_riviere_ssp126" class="anim-container">
+                  {% include 'flux/flux_rivieres_ssp126.html' %}
+                  <legend>Evolution du niveau de la Mer en Europe - SSP126</legend>
+                </div>
+              <td>
+                <div id="ssp-126-flux" class="focus">
+                  <h3>SSP 1-2.6</h3>
+                  <p>
+                    Le scénario SSP 126 est basé sur une tendance relativement optimiste avec des investissements dans
+                    l'éducation et la santé, une croissance économique rapide et un bon fonctionnement des institutions,
+                    et en particulier une évolution croissante vers des pratiques durables.
+                    <br>
+                    Le niveau de réchauffement considéré par ce scénario est de 1.8°C d'ici 2100.
+                  </p>
+                </div>
+              </td>
+            </tr>
+          </table>
+        </div>
+
+        <div id="flux-ssp-370" class="tabcontent-flux-ssp">
+          <table>
+            <tr>
+              <td>
+                <div id="flux_riviere_ssp370" class="anim-container">
+                  {% include 'flux/flux_rivieres_ssp370.html' %}
+                  <legend>Evolution du niveau de la Mer en Europe - SSP370</legend>
+                </div>
+              </td>
+              <td>
+                <div id="ssp-370-flux" class="focus">
+                  <h3>SSP 3-7.0</h3>
+                  <p>
+                    Le scénario SSP370 est basé sur une tendance de développement plus pessimistes, avec peu
+                    d'investissements dans l'éducation ou la santé, une croissance démographique rapide et des
+                    inégalités
+                    croissantes. Les pays donnent la priorité à la sécurité régionale ce qui conduit à des sociétés
+                    hautement vulnérables au changement climatique.
+                    <br>
+                    Le niveau de réchauffement considéré par ce scénario est de 3.6°C d'ici 2100.
+                  </p>
+                </div>
+              </td>
+            </tr>
+          </table>
+        </div>
+
+        <div id="flux-ssp-585" class="tabcontent-flux-ssp">
+          <table>
+            <tr>
+              <td>
+                <div id="flux_riviere_ssp585" class="anim-container">
+                  {% include 'flux/flux_rivieres_ssp585.html' %}
+                  <legend>Evolution du niveau de la Mer en Europe - SSP585</legend>
+                </div>
+                </p>
+              </td>
+              <td>
+                <div id="ssp-585-flux" class="focus">
+                  <h3>SSP 5-8.5</h3>
+                  <p>
+                    Le scénario SSP585 est très similaire au scénario SSP1(2.6). Il est basé sur une tendance
+                    relativement
+                    optimiste avec des investissements dans l'éducation et la santé, une croissance économique rapide et
+                    un bon fonctionnement des institutions. Cependant, il suppose une économie basée sur l'énergie et
+                    les
+                    combustibles fossiles (pétrole, charbon, gaz naturel).
+                    <br>
+                    Le niveau de réchauffement considéré par ce scénario est de 4.4°C d'ici 2100.
+                  </p>
+                </div>
+              </td>
+            </tr>
+          </table>
+        </div>
+        <p>L'augmentation des température, notamment, est responsable de l'asséchement des sols et d'une plus forte
+          évaporation de l'eau, ce qui entraîne une réduction du volume d'eau dans les cours d'eau. Heureusement,
+          l'augmentation des température entraine également une fonte plus rapide des glaciers et donc un apport
+          supplémentaire dans les cours d'eau !
+          <br>
+          Cependant, comme vous pouvez le tester dans l'animation précédente, si le volume du glacier diminue, alors le
+          volume d'eau de fonte aussi. Il y a alors moins d'eau en apport dans les cours d'eau et leur asséchement est
+          accéléré.
+        </p>
+        <p>
+          La cloche que l'on voit se dessiner au cours des années nous montre clairement quand le maximum est atteint,
+          et ce maximum ne saurait tarder. Il sera atteint dans une dizaine d'année, et à partir de ce moment là, nous
+          ne pourrons plus compter sur les glaciers pour camoufler l'impacts du déréglement climatique sur les cours
+          d'eau.
+          <br>
+          Il ne faut pas oublier que cela nous montre, aussi, que cette plus grande quantité d'eau de fonte
+          relachée par les glaciers peut causer de terribles impacts. Le fait de fondre plus tôt dans l'année, vers le
+          printemps, à un moment où il y
+          a encore beaucoup d'eau par les tombées de neige de l'hiver et le stock des nappes phréatique est au plus haut
+          est un terrain très favorable pour les inondations.
+        </p>
 
 
       </section>
@@ -794,32 +889,32 @@
         </p>
         <p>
           Voilà une carte de l’Europe qui vous présente les zones qui seraient impactées.
-          <div class="tab">
-            <a class="tablinks" onclick="openTab(event, 'mer-ssp-126','tabcontent-niveau-mer')">SSP 1-2.6</a>
-            <a class="tablinks" onclick="openTab(event, 'mer-ssp-370','tabcontent-niveau-mer')">SSP 3-7.0</a>
-            <a class="tablinks" onclick="openTab(event, 'mer-ssp-585','tabcontent-niveau-mer')">SSP 5-8.5</a>
-            <icon>
-              <img src="{{ url_for('static', filename='images/icon_highlight_mouse_cursor.png') }}" width="32px"
-                margin="0 0.5rem" alt="Icon d'intéraction avec les animations" />
-            </icon>
+        <div class="tab">
+          <a class="tablinks" onclick="openTab(event, 'mer-ssp-126','tabcontent-niveau-mer')">SSP 1-2.6</a>
+          <a class="tablinks" onclick="openTab(event, 'mer-ssp-370','tabcontent-niveau-mer')">SSP 3-7.0</a>
+          <a class="tablinks" onclick="openTab(event, 'mer-ssp-585','tabcontent-niveau-mer')">SSP 5-8.5</a>
+          <icon>
+            <img src="{{ url_for('static', filename='images/icon_highlight_mouse_cursor.png') }}" width="32px"
+              margin="0 0.5rem" alt="Icon d'intéraction avec les animations" />
+          </icon>
+        </div>
+        <div id="mer-ssp-126" class="tabcontent-niveau-mer">
+          <div class="illustration-container">
+            {% include 'niveau_mer_ssp126.html' %}
+            <legend>Evolution du niveau de la mer/océan en Europe - SSP1-2.6</legend>
           </div>
-          <div id="mer-ssp-126" class="tabcontent-niveau-mer">
-            <div class="illustration-container">
-              {% include 'niveau_mer_ssp126.html' %}
-              <legend>Evolution du niveau de la mer/océan en Europe - SSP1-2.6</legend>
-            </div>
+        </div>
+        <div id="mer-ssp-370" class="tabcontent-niveau-mer">
+          <div class="illustration-container">
+            {% include 'niveau_mer_ssp370.html' %}
+            <legend>Evolution du niveau de la mer/océan en Europe - SSP3-7.0</legend>
           </div>
-          <div id="mer-ssp-370" class="tabcontent-niveau-mer">
-            <div class="illustration-container">
-              {% include 'niveau_mer_ssp370.html' %}
-              <legend>Evolution du niveau de la mer/océan en Europe - SSP3-7.0</legend>
-            </div>
+        </div>
+        <div id="mer-ssp-585" class="tabcontent-niveau-mer">
+          <div class="illustration-container">
+            {% include 'niveau_mer_ssp585.html' %}
+            <legend>Evolution du niveau de la mer/océan en Europe - SSP5-8.5</legend>
           </div>
-          <div id="mer-ssp-585" class="tabcontent-niveau-mer">
-            <div class="illustration-container">
-              {% include 'niveau_mer_ssp585.html' %}
-              <legend>Evolution du niveau de la mer/océan en Europe - SSP5-8.5</legend>
-            </div>
         </div>
         <p>
           Mais ce problème n’est pas le seul, des problèmes bien plus insidieux pourrait arriver avec la fonte de
@@ -838,13 +933,15 @@
         </h3>
         <p>
           Nous avons le pouvoir d'agir à petite échelle. Par notre consommation et nos actes.
-          Mais le plus important reste de faire comprendre aux personnes qui nous dirige l'importance du changement climatique.
+          Mais le plus important reste de faire comprendre aux personnes qui nous dirige l'importance du changement
+          climatique.
           Il faut réussir à faire agir les grands acteurs (états, entreprises).
         </p>
         <div id="thanks" class="focus">
           <h4>Merci !</h4>
           <p>
-            Merci au <a href="https://docs.oggm.org/en/stable/index.html">Projet OGGM</a> sans qui nous n'auront pas pu faire toutes les prédictions et les études.  
+            Merci au <a href="https://docs.oggm.org/en/stable/index.html">Projet OGGM</a> sans qui nous n'auront pas pu
+            faire toutes les prédictions et les études.
             Aux contributeurs de la bases de données DOI-WGMS.
           </p>
         </div>
