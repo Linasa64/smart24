@@ -692,7 +692,8 @@
         <div class="two-columns">
           <div class="left-part">
             <p>
-              Cette citation n'aurait-elle pas été écrite pour ce moment précis ? Sous quelle forme disparaît notre glace ?
+              Cette citation n'aurait-elle pas été écrite pour ce moment précis ? Sous quelle forme disparaît notre
+              glace ?
               Sous les 3. Sous forme liquide par la fonte, solide lors de vêlage, ou gazeuse lorsque cell-ci disparaît.
               Le vêlage est le phénomène qui provoque la création d'iceberg.
             </p>
@@ -737,10 +738,10 @@
         </p>
         <div id="albedo" class="focus">
           <h3>L'effet albédo</h3>
-            <div class="illustration-container">
-              <img src="{{ url_for('static', filename='images/albedo.jpg') }}" alt="Illustration" width="80%">
-              <legend>Les principes de l'Effet Albédo ©Surfrider Foundation Europe</legend>
-            </div>
+          <div class="illustration-container">
+            <img src="{{ url_for('static', filename='images/albedo.jpg') }}" alt="Illustration" width="80%">
+            <legend>Les principes de l'Effet Albédo ©Surfrider Foundation Europe</legend>
+          </div>
         </div>
 
         <p>
@@ -761,19 +762,104 @@
         </p>
         <p>
           Voilà une carte de l’Europe qui vous présente les zones qui seraient impactées.
-        <div id="niveau_mer_ssp126" class="anim-container">
-          {% include 'niveau_mer_ssp126.html' %}
-          <icon><img src="{{ url_for('static', filename='images/icon_highlight_mouse_cursor.png') }}" width="32px"
-              margin="0 0.5rem" alt="Icon d'intéraction avec les animations" /></icon>
-          <legend>Evolution du niveau de la Mer en Europe - SSP126</legend>
+          </legend>
+        <div class="tab">
+          <a class="tablinks" onclick="openSSP(event, 'evolution-ssp-126')">SSP 1-2.6</a>
+          <a class="tablinks" onclick="openSSP(event, 'evolution-ssp-370')">SSP 3-7.0</a>
+          <a class="tablinks" onclick="openSSP(event, 'evolution-ssp-585')">SSP 5-8.8</a>
+          <icon>
+            <img src="{{ url_for('static', filename='images/icon_highlight_mouse_cursor.png') }}" width="32px"
+              margin="0 0.5rem" alt="Icon d'intéraction avec les animations" />
+          </icon>
         </div>
-        </p>
+
+        <div id="evolution-ssp-126" class="tabcontent-ssp">
+          <table>
+            <tr>
+              <td>
+                <div id="niveau_mer_ssp126" class="anim-container">
+                  {% include 'niveau_mer_ssp126.html' %}
+                  <legend>Evolution du niveau de la Mer en Europe - SSP126</legend>
+                </div>
+              <td>
+                <div id="ssp-126" class="focus">
+                  <h3>SSP 1-2.6</h3>
+                  <p>
+                    Le scénario SSP 126 est basé sur une tendance relativement optimiste avec des investissements dans
+                    l'éducation et la santé, une croissance économique rapide et un bon fonctionnement des institutions,
+                    et en particulier une évolution croissante vers des pratiques durables.
+                    <br>
+                    Le niveau de réchauffement considéré par ce scénario est de 1.8°C d'ici 2100.
+                  </p>
+                </div>
+              </td>
+            </tr>
+          </table>
+        </div>
+
+        <div id="evolution-ssp-370" class="tabcontent-ssp">
+          <table>
+            <tr>
+              <td>
+                <div id="niveau_mer_ssp370" class="anim-container">
+                  {% include 'niveau_mer_ssp370.html' %}
+                  <legend>Evolution du niveau de la Mer en Europe - SSP370</legend>
+                </div>
+              </td>
+              <td>
+                <div id="ssp-370" class="focus">
+                  <h3>SSP 3-7.0</h3>
+                  <p>
+                    Le scénario SSP370 est basé sur une tendance de développement plus pessimistes, avec peu
+                    d'investissements dans l'éducation ou la santé, une croissance démographique rapide et des
+                    inégalités
+                    croissantes. Les pays donnent la priorité à la sécurité régionale ce qui conduit à des sociétés
+                    hautement vulnérables au changement climatique.
+                    <br>
+                    Le niveau de réchauffement considéré par ce scénario est de 3.6°C d'ici 2100.
+                  </p>
+                </div>
+              </td>
+            </tr>
+          </table>
+        </div>
+
+        <div id="evolution-ssp-585" class="tabcontent-ssp">
+          <table>
+            <tr>
+              <td>
+                <div id="niveau_mer_ssp585" class="anim-container">
+                  {% include 'niveau_mer_ssp585.html' %}
+                  <legend>Evolution du niveau de la Mer en Europe - SSP585</legend>
+                </div>
+                </p>
+              </td>
+              <td>
+                <div id="ssp-585" class="focus">
+                  <h3>SSP 5-8.5</h3>
+                  <p>
+                    Le scénario SSP585 est très similaire au scénario SSP1(2.6). Il est basé sur une tendance
+                    relativement
+                    optimiste avec des investissements dans l'éducation et la santé, une croissance économique rapide et
+                    un bon fonctionnement des institutions. Cependant, il suppose une économie basée sur l'énergie et
+                    les
+                    combustibles fossiles (pétrole, charbon, gaz naturel).
+                    <br>
+                    Le niveau de réchauffement considéré par ce scénario est de 4.4°C d'ici 2100.
+                  </p>
+                </div>
+              </td>
+            </tr>
+          </table>
+        </div>
         <p>
           Mais ce problème n’est pas le seul, des problèmes bien plus insidieux pourrait arriver avec la fonte de
           ceux-ci. L’accélération de l’effet de serre par le rejet de gaz emprisonnés (qui comme l’effet albédo va
-          accélérer de nouveau la fonte). Cetaines espèces perdent leur lieu de vie. La libération d’anciens organismes pouvant se révéler bénéfiques ou
-          terriblement léthaux... 
+          accélérer de nouveau la fonte). Cetaines espèces perdent leur lieu de vie. La libération d’anciens organismes
+          pouvant se révéler bénéfiques ou
+          terriblement léthaux...
         </p>
+
       </section>
       <hr>
       <section id="section_7" class="section-container">
@@ -783,13 +869,14 @@
         </h3>
         <p>
           Nous avons le pouvoir d'agir à petite échelle. Par notre consommation et nos actes.
-          Mais le plus important reste de faire comprendre aux personnes qui nous diroge l'importance du changement climatique.
+          Mais le plus important reste de faire comprendre aux personnes qui nous diroge l'importance du changement
+          climatique.
           Il ffau réussir à faire agir les grands acteurs (états, entreprises).
         </p>
         <div id="thanks" class="focus">
           <h4>Merci !</h4>
           <p>
-            Merci au Projet OGGM sans qui nous n'auront pas pu faire toutes les prédictions et les études.  
+            Merci au Projet OGGM sans qui nous n'auront pas pu faire toutes les prédictions et les études.
             Aux contributeurs de la bases de données DOI-WGMS.
           </p>
         </div>
